@@ -1,0 +1,58 @@
+{
+  "requests": [
+    {
+      "selection": {
+        "format": "constructed"
+      },
+      "filter": {
+        "kind": "group",
+        "operator": "and",
+        "children": [
+          {
+            "kind": "condition",
+            "field": "avatar",
+            "value": "Archimago"
+          },
+          {
+            "kind": "condition",
+            "field": "deck_card",
+            "value": "windmill"
+          },
+          {
+            "kind": "condition",
+            "field": "deck_card",
+            "negate": true,
+            "value": "steppe"
+          }
+        ]
+      }
+    },
+    {
+      "selection": {
+        "format": "constructed"
+      },
+      "filter": {
+        "kind": "group",
+        "operator": "and",
+        "children": [
+          {
+            "kind": "condition",
+            "field": "avatar",
+            "value": "Archimago"
+          },
+          {
+            "kind": "condition",
+            "field": "deck_card",
+            "negate": true,
+            "value": "windmill"
+          },
+          {
+            "kind": "condition",
+            "field": "deck_card",
+            "value": "steppe"
+          }
+        ]
+      }
+    }
+  ]
+}
