@@ -18,7 +18,7 @@ Clone the repository and install the dependencies:
 Create a JSON file containing one or more API requests.
 
 For example, query.json:
-
+```json
 {
   "requests": [
     {
@@ -39,11 +39,11 @@ For example, query.json:
     }
   ]
 }
-
+```
 
 Multiple requests can be added to the requests array.
 
-Running
+# Running
 
 Pass the JSON filename to the program:
 
@@ -57,7 +57,7 @@ uv run main.py config/filters.json
 
 The program will execute each request in the JSON file and load the results into a Pandas DataFrame.
 
-Output
+# Output
 
 The API returns aggregate statistics such as:
 
@@ -75,9 +75,10 @@ Unresolved turn player games
 
 For example:
 
+```bash
    playerGames  matches  wins  winRate
 0           60       60    34   0.566667
-
+```
 
 The winRate value is represented as a decimal. For example:
 
@@ -85,19 +86,20 @@ The winRate value is represented as a decimal. For example:
 
 Project Structure
 
-A typical project might look like:
-
+```bash
 .
 ├── main.py
 ├── query.json
 ├── pyproject.toml
 ├── uv.lock
 └── README.md
+```
 
 Adding More Filters
 
 To query multiple avatars, add additional entries to the requests array:
 
+```json
 {
   "requests": [
     {
@@ -138,7 +140,7 @@ To query multiple avatars, add additional entries to the requests array:
     }
   ]
 }
-
+```
 
 Each request will produce a separate row in the resulting DataFrame.
 
